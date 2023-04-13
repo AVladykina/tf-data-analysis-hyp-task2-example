@@ -7,7 +7,7 @@ chat_id = 433242632 # Ваш chat ID, не меняйте название пе�
 def solution(x: np.array, y: np.array) -> bool:
     ks_stat, p_value = ks_2samp(x, y)
     alpha = 0.04
-    n = len(data_hist)
+    n = len(x)
     crit_value = 1.36 / np.sqrt(n)
 
     return ks_stat > crit_value
